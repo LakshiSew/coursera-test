@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 2em;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 10px;
+  gap: 15px;
+}
+
+.section {
+  position: relative;
+  border: 1px solid black;
+  padding: 40px 10px 10px 10px;
+  margin: 10px 0;
+  background-color: gray;
+  flex: 1 1 100%;
+}
+
+.section h3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 5px 10px;
+  border: 1px solid black;
+  font-size: 1.25em;
+}
+
+.section h3.one {
+  background-color: red;
+}
+.section h3.two {
+  background-color: brown;
+  color: whitesmoke;
+}
+.section h3.tree {
+  background-color: yellowgreen;
+}
+
+p {
+  font-size: 1em;
+  padding: 5px;
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+  .section {
+    flex: 1 1 100%;
+  }
+}
+
+
+/* Tablet View */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .section {
+    flex: 1 1 48%;
+  }
+
+  .section:last-child {
+    flex: 1 1 100%;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 1200px) {
+  .section {
+    flex: 1 1 30%;
+  }
+}
